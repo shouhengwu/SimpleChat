@@ -38,7 +38,8 @@ public class login extends NotConnectedClientCommand
 		  return;
 	  }
 	  
-	  //check if password consists of blanks only
+	  getClient().setId(username);
+	  getClient().setPassword(password);
 	  
     try
     {

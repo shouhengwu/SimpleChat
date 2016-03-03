@@ -74,17 +74,26 @@ public class ChatClient1 extends AbstractClient
     return myClientUI;
   }
 
+  //Instance methods ************************************************
+
+
   public String getId()
   {
     return myId;
+  }
+  
+  public void setId(String newId){
+	  myId = newId;
   }
 
   public String getPassword(){
 	  return myPassword;  
   }
-
-  //Instance methods ************************************************
-
+  
+  public void setPassword(String newPwd){
+	  myPassword = newPwd;
+  }
+  
   /**
    * This method handles all data that comes in from the server.
    *
