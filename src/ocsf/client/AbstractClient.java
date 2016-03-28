@@ -309,9 +309,8 @@ public abstract class AbstractClient implements Runnable
    */
   protected abstract void handleMessageFromServer(Object msg);
 
-
 // METHODS TO BE USED FROM WITHIN THE FRAMEWORK ONLY ----------------
-
+  
   /**
    * Closes all aspects of the connection to the server.
    *
@@ -346,3 +345,4 @@ public abstract class AbstractClient implements Runnable
   }
 }
 // end of AbstractClient class
+

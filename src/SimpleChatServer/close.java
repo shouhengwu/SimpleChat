@@ -20,6 +20,7 @@ public class close extends ServerCommand {
 				getServer().close();
 			} catch (IOException e) {
 				getServer().serverUI().display("Server was unable to close");
+
 			}
 			getServer().setClosed(true);
 			getServer().serverUI().display("Connection closed");

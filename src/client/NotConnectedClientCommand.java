@@ -1,7 +1,10 @@
 package client;
 
+<<<<<<< HEAD
 import java.io.IOException;
 
+=======
+>>>>>>> 6454f56404492813a20b500c1b581e3090cfd76c
 /**
  *  This abstract class provides should be extended by any client command class for
  *  a command that can only be executed when the client is not connected to a server

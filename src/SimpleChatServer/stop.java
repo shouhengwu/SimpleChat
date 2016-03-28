@@ -19,4 +19,5 @@ public class stop extends ServerCommand {
 		else
 			System.out.println("The server is already closed. No action was performed.");
 	}
+
 }

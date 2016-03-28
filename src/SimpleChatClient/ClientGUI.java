@@ -27,13 +27,20 @@
  * LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
  * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+<<<<<<< HEAD
  */ 
+=======
+ */
+>>>>>>> 6454f56404492813a20b500c1b581e3090cfd76c
 
 /**
  * Modified by Shouheng Wu to accomodate password feature, and to
  * provide a default guest user that can be used to create new accounts
  * February 28, 2016
+<<<<<<< HEAD
  * 
+=======
+>>>>>>> 6454f56404492813a20b500c1b581e3090cfd76c
  */
 
 
@@ -43,13 +50,17 @@ package SimpleChatClient;
 
 import java.awt.*;
 import java.awt.event.*;
+<<<<<<< HEAD
 import java.io.IOException;
+=======
+>>>>>>> 6454f56404492813a20b500c1b581e3090cfd76c
 
 import javax.swing.*;
 
 import common.ChatIF;
 import client.ChatClient1;
 
+<<<<<<< HEAD
 public class ClientGUI extends JPanel implements ActionListener, ChatIF {
     protected JTextField textField;
     protected JTextArea textArea;
@@ -60,10 +71,25 @@ public class ClientGUI extends JPanel implements ActionListener, ChatIF {
      */
     final public static int DEFAULT_PORT = 5555;
     
+=======
+import static javax.swing.JFrame.*;
+
+public class ClientGUI extends JPanel implements ActionListener, ChatIF {
+    private JTextField textField;
+    private JTextArea textArea;
+    private final static String newline = "\n";
+
+    /**
+     * The default port to connect on.
+     */
+    private final static int DEFAULT_PORT = 5555;
+
+>>>>>>> 6454f56404492813a20b500c1b581e3090cfd76c
     /**
      * The instance of the client created by this ClientGUI.
      */
 
+<<<<<<< HEAD
     ChatClient1 client;
     
     /**
@@ -74,6 +100,18 @@ public class ClientGUI extends JPanel implements ActionListener, ChatIF {
     final public static String DEFAULT_PASSWORD = "123";
 
     public ClientGUI(String host, int port, String id, String pwd) {
+=======
+    private ChatClient1 client;
+
+    /**
+     * The default(guest) user account and password.
+     */
+
+    private final static String DEFAULT_ID = "guest";
+    private final static String DEFAULT_PASSWORD = "123";
+
+    private ClientGUI(String host, int port, String id, String pwd) {
+>>>>>>> 6454f56404492813a20b500c1b581e3090cfd76c
         super(new GridBagLayout());
 
         textField = new JTextField(20);
@@ -94,6 +132,7 @@ public class ClientGUI extends JPanel implements ActionListener, ChatIF {
         c.weightx = 1.0;
         c.weighty = 1.0;
         add(scrollPane, c);
+<<<<<<< HEAD
         
         try
         {
@@ -104,6 +143,14 @@ public class ClientGUI extends JPanel implements ActionListener, ChatIF {
           display("Error: Can't setup connection!\n"
                     + " Terminating client.");
           System.exit(1);
+=======
+
+        try {
+            client = new ChatClient1(host, port, this, id, pwd);
+        } catch (Exception e) {
+            display("Error: Can't setup connection!\n Terminating client.");
+            System.exit(1);
+>>>>>>> 6454f56404492813a20b500c1b581e3090cfd76c
         }
         display("connected to " + host + "-" + port);
     }
@@ -113,10 +160,16 @@ public class ClientGUI extends JPanel implements ActionListener, ChatIF {
         client.handleMessageFromClientUI(message);
         textField.setText("");
     }
+<<<<<<< HEAD
     
     public void display(String message)
     {
         textArea.append("> " + message + newline);    	
+=======
+
+    public void display(String message) {
+        textArea.append("> " + message + newline);
+>>>>>>> 6454f56404492813a20b500c1b581e3090cfd76c
         //Make sure the new text is visible, even if there
         //was a selection in the text area.
         textArea.setCaretPosition(textArea.getDocument().getLength());
@@ -130,7 +183,11 @@ public class ClientGUI extends JPanel implements ActionListener, ChatIF {
     private static void createAndShowGUI(String host, int port, String id, String pwd) {
         //Create and set up the window.
         JFrame frame = new JFrame("Chat");
+<<<<<<< HEAD
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+=======
+        frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
+>>>>>>> 6454f56404492813a20b500c1b581e3090cfd76c
 
         //Add contents to the window.
         frame.add(new ClientGUI(host, port, id, pwd));
@@ -141,6 +198,7 @@ public class ClientGUI extends JPanel implements ActionListener, ChatIF {
     }
 
     public static void main(String[] args) {
+<<<<<<< HEAD
         final String host;
         int port = 0;  //The port number
         String idIn = "";
@@ -165,12 +223,35 @@ public class ClientGUI extends JPanel implements ActionListener, ChatIF {
         pwd = pwdIn;
         
     	//Schedule a job for the event dispatch thread:
+=======
+        final String host = "localhost";
+        int port;  //The port number
+        String idIn, pwdIn;
+        final String id, pwd;
+        try {
+            idIn = args[0];
+            pwdIn = args[1];
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Logging in with default id and password");//changed by Shouheng Wu
+            idIn = DEFAULT_ID;
+            pwdIn = DEFAULT_PASSWORD;
+        }
+
+        id = idIn;
+        pwd = pwdIn;
+
+        //Schedule a job for the event dispatch thread:
+>>>>>>> 6454f56404492813a20b500c1b581e3090cfd76c
         //creating and showing this application's GUI.
         javax.swing.SwingUtilities.invokeLater(new Runnable() {
             public void run() {
                 createAndShowGUI(host, DEFAULT_PORT, id, pwd);
             }
+<<<<<<< HEAD
        });
+=======
+        });
+>>>>>>> 6454f56404492813a20b500c1b581e3090cfd76c
     }
 }
 

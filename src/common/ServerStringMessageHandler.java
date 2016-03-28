@@ -1,5 +1,6 @@
 package common;
 
+<<<<<<< HEAD
 import ocsf.server.*;
 import java.io.*;
 
@@ -25,4 +26,24 @@ public class ServerStringMessageHandler extends ServerNonLoginHandler
     getServer().sendToAllClients((String)getClient().getInfo("id") + "> " + myString);
   }
 
+=======
+/**
+ * This class defines a message handler to simple request that a String be displayed.
+ */
+public class ServerStringMessageHandler extends ServerNonLoginHandler {
+    private String myString;
+
+    public ServerStringMessageHandler(String str) {
+        myString = str;
+    }
+
+    /**
+     * This method has the message String displayed on the server console and
+     * sent to all clients.
+     */
+    public void handleMess() {
+        System.out.println(getClient().getInfo("id") + "> " + myString);
+        getServer().sendToAllClients(getClient().getInfo("id") + "> " + myString);
+    }
+>>>>>>> 6454f56404492813a20b500c1b581e3090cfd76c
 }

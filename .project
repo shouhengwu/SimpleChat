@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
+<<<<<<< HEAD
 	<name>SimpleChat2</name>
+=======
+	<name>SimpleChat</name>
+>>>>>>> 6454f56404492813a20b500c1b581e3090cfd76c
 	<comment></comment>
 	<projects>
 	</projects>

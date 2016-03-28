@@ -12,4 +12,5 @@ public class newChannel extends ServerCommand {
 		getServer().serverUI().display("New channel with the name " + chl.getChannelName() + " created");
 	}
 	
+
 }

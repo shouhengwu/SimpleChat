@@ -178,4 +178,5 @@ public class ObservableClient extends Observable
     setChanged();
     notifyObservers(CONNECTION_ESTABLISHED);
   }
+
 }

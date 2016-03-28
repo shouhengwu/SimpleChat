@@ -1,16 +1,26 @@
 package client;
 
 /**
+<<<<<<< HEAD
  *  This abstract class specifies a framework for any command from the client
  *  user interface to the client. Any such command must be implemented with
  *  a subclass of this class with a classname identical to the command
  *  (stripped of the '#'). An instance of the command class will be formed
  *  from the name using reflection, then its doCommand method will be
  *  executed.
+=======
+ * This abstract class specifies a framework for any command from the client
+ * user interface to the client. Any such command must be implemented with
+ * a subclass of this class with a classname identical to the command
+ * (stripped of the '#'). An instance of the command class will be formed
+ * from the name using reflection, then its doCommand method will be
+ * executed.
+>>>>>>> 6454f56404492813a20b500c1b581e3090cfd76c
  *
  * @author Chris Nevison
  * @version February 2012
  */
+<<<<<<< HEAD
 public abstract class ClientCommand
 {
   private String myString;
@@ -47,4 +57,5 @@ public abstract class ClientCommand
    * implementing this method in the subclass that defines the command.
    */
   abstract public void doCommand();
+
 }

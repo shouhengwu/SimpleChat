@@ -4,10 +4,13 @@
 
 package ocsf.server;
 
+<<<<<<< HEAD
 import java.io.*;
 import java.net.*;
 import java.util.*;
 
+=======
+>>>>>>> 6454f56404492813a20b500c1b581e3090cfd76c
 /**
 * The <code> AdaptableServer </code> is an adapter class
 * that extends the <code> AbstractServer </code> class in place of
@@ -32,8 +35,13 @@ class AdaptableServer extends AbstractServer
   /**
    * Constructs the server adapter.
    *
+<<<<<<< HEAD
    * @param  host  the server's host name.
    * @param  port  the port number.
+=======
+   * @param  port  the port number.
+   * @param  server  the server's host name.
+>>>>>>> 6454f56404492813a20b500c1b581e3090cfd76c
    */
   public AdaptableServer(int port, ObservableServer server)
   {

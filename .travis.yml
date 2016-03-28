@@ -1,0 +1,7 @@
+language: java
+jvm: 1.8
+
+# whitelist
+branches:
+    only: rgavs-local
+        # - master

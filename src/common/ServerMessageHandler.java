@@ -16,8 +16,17 @@ import java.io.*;
 
 public abstract class ServerMessageHandler implements Serializable
 {
+<<<<<<< HEAD
   private AbstractServer myServer;
   private ConnectionToClient myClient;
+=======
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = -7759538943523872840L;
+	private AbstractServer myServer;
+	private ConnectionToClient myClient;
+>>>>>>> 6454f56404492813a20b500c1b581e3090cfd76c
 
   /**
    * Allows the server to provide access to itself
@@ -59,10 +68,19 @@ public abstract class ServerMessageHandler implements Serializable
     return myClient;
   }
 
+<<<<<<< HEAD
   /**
    * This method provides the slot that any command from the client sent to the server must fill by
    * implementing this method in the subclass that defines the command.
    */
   public abstract void handleMessage();
+=======
+  	/**
+	 * This method provides the slot that any command from the client sent to
+	 * the server must fill by implementing this method in the subclass that
+	 * defines the command.
+	 */
+	public abstract void handleMessage();
+>>>>>>> 6454f56404492813a20b500c1b581e3090cfd76c
 
 }

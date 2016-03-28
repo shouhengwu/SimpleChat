@@ -36,6 +36,5 @@ public class quit extends ServerCommand
 
 		System.exit(0);
 
-
 	}
 }

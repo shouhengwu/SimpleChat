@@ -4,6 +4,7 @@ package SimpleChatServer;
 
 public abstract class ServerCommand {
 
+<<<<<<< HEAD
 	private String myString;
 	private EchoServer1 myServer;
 
@@ -38,6 +39,7 @@ public abstract class ServerCommand {
 	 * implementing this method in the subclass that defines the command.
 	 */
 	abstract public void doCommand();
+
 }
 
 

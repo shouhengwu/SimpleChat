@@ -67,4 +67,5 @@ public class ServerConsole implements ChatIF{
 	    sconsole.accept();  //Wait for console data
 	  }//end main()
 
+
 }

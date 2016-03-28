@@ -3,9 +3,14 @@ package SimpleChatServer;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.HashMap;
+<<<<<<< HEAD
 
 import client.ChatClient1;
 import client.ClientCommand;
+=======
+import java.util.Objects;
+
+>>>>>>> 6454f56404492813a20b500c1b581e3090cfd76c
 import ocsf.server.*;
 import common.*;
 
@@ -249,7 +254,5 @@ public class EchoServer1 extends AbstractServer
 	  sendToAllClients("SERVER MSG> A client has disconnected.");
 		 
   }//end clientConnected
-  
-  
   
 }

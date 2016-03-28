@@ -3,7 +3,6 @@
 // license found at www.lloseng.com 
 
 package ocsf.client;
-
 import java.io.*;
 import java.net.*;
 import java.util.*;
@@ -79,4 +78,5 @@ class AdaptableClient extends AbstractClient
   {
     client.handleMessageFromServer(msg);
   }
+
 }
